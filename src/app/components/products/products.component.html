@@ -1,0 +1,103 @@
+
+<app-header></app-header>
+  
+ <!-- Products start-->
+  
+ <section id="products" class="container">
+    <h1 class="text-center text-primary my-4">Latest Laptops</h1>
+    <div class="container">
+      <div class="row">
+        <ng-container  *ngFor="let item of laptops">
+        <div class="col-md-4 col-sm-12 col-12 mb-3" *ngIf="item.warnty>1">
+          <div class=" card">
+            <img src="..\assets\images\products\{{item.img}}" alt="">
+            <div class="card-body">
+              <h3 class="card-title">{{item.name | uppercase}}</h3>
+              <p>{{item.content | titlecase}}</p>
+                 <button class="btn btn-danger me-1">Cost:{{item.price | currency:"INR"}}/-</button>
+                 <button class="btn btn-danger me-1">Warnty:{{item.warnty}}Year</button>
+                 <button class="btn btn-success">Cart</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <!--
+        <div class="col-md-4 col-sm-12 col-12 mb-3">
+          <div class=" card">
+            <img src="..\assets\images\products\asus.jpg" alt="">
+            <div class="card-body">
+              <h3 class="card-title">Asus Laptop</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem aperiam 
+                perspiciatis veniam quam minima quod dolore rerum perferendis facere ipsum, nihil
+                 nam, dignissimos cupiditate nostrum, officia porro corporis. Dolores.</p>
+                 <button class="btn btn-danger me-2">Cost:20000/-</button>
+                 <button class="btn btn-danger me-2">Warnty: 1Year</button>
+                 <button class="btn btn-success">Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-12 mb-3">
+          <div class=" card">
+            <img src="..\assets\images\products\dell.webp" alt="">
+            <div class="card-body">
+              <h3 class="card-title">Dell Laptop</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem aperiam 
+                perspiciatis veniam quam minima quod dolore rerum perferendis facere ipsum, nihil
+                 nam, dignissimos cupiditate nostrum, officia porro corporis. Dolores.</p>
+                 <button class="btn btn-danger me-2">Cost:20000/-</button>
+                 <button class="btn btn-danger me-2">Warnty: 1Year</button>
+                 <button class="btn btn-success">Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-12 mb-3">
+          <div class=" card">
+            <img src="..\assets\images\products\acer.jpg" alt="">
+            <div class="card-body">
+              <h3 class="card-title">Acer Laptop</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem aperiam 
+                perspiciatis veniam quam minima quod dolore rerum perferendis facere ipsum, nihil
+                 nam, dignissimos cupiditate nostrum, officia porro corporis. Dolores.</p>
+                 <button class="btn btn-danger me-2">Cost:20000/-</button>
+                 <button class="btn btn-danger me-2">Warnty: 1Year</button>
+                 <button class="btn btn-success">Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-12 mb-3">
+          <div class=" card">
+            <img src="..\assets\images\products\lenovo.jpg" alt="">
+            <div class="card-body">
+              <h3 class="card-title">Lenovo Laptop</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem aperiam 
+                perspiciatis veniam quam minima quod dolore rerum perferendis facere ipsum, nihil
+                 nam, dignissimos cupiditate nostrum, officia porro corporis. Dolores.</p>
+                 <button class="btn btn-danger me-2">Cost:20000/-</button>
+                 <button class="btn btn-danger me-2">Warnty: 1Year</button>
+                 <button class="btn btn-success">Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-12 mb-3">
+          <div class=" card">
+            <img src="..\assets\images\products\mi.jpg" alt="">
+            <div class="card-body">
+              <h3 class="card-title">MI Laptop</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem aperiam 
+                perspiciatis veniam quam minima quod dolore rerum perferendis facere ipsum, nihil
+                 nam, dignissimos cupiditate nostrum, officia porro corporis. Dolores.</p>
+                 <button class="btn btn-danger me-2">Cost:20000/-</button>
+                 <button class="btn btn-danger me-2">Warnty: 1Year</button>
+                 <button class="btn btn-success">Cart</button>
+            </div>
+          </div>
+        </div>
+   -- >
+      </div>
+    </div>
+  </section>
+  
+  <!-- Products end-->
+
+
+<app-footer></app-footer>

@@ -1,0 +1,25 @@
+<section id="banner" class="carousel slide" data-bs-ride="carousel">
+  
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#banner"[attr.data-bs-slide-to] ="i" class="active"
+      *ngFor="let imge of carousel let i=index" [ngClass]="i===0 ? 'active' : '' "></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item " *ngFor="let imge of carousel let i=index" [ngClass]="i===0 ? 'active' : '' ">
+        <img src="..\assets\images\{{imge.img}}" alt="imge.alt" class="d-block w-100">
+      </div>
+   
+      
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </section>
